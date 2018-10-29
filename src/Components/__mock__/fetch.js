@@ -3,12 +3,12 @@ const output = {
     {
       imdbID: 0,
       Title: "The First Movie",
-      Poster: ""
+      Poster: "./pathfor/firstMovie"
     },
     {
       imdbID: 1,
       Title: "The Second Movie",
-      Poster: ""
+      Poster: "./pathfor/secondMovie"
     }
   ]
 }

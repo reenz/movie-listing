@@ -30,5 +30,9 @@ describe('MovieListing component', () => {
     it('should return the title of fetched movies', () => {
       expect(movieListing.state('movies')[0].Title).toEqual("The First Movie");
     });
+
+    it('should return the poster of fetched movies', () => {
+      expect(movieListing.state('movies')[1].Poster).toEqual("./pathfor/secondMovie");
+    });
   });
 });
