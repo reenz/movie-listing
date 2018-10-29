@@ -30,7 +30,6 @@ class MovieListing extends Component {
 
   render() {
     const{ movies, posterUrl } = this.state;
-    console.log(movies , posterUrl);
     
     return(
       <div className="Container" >
