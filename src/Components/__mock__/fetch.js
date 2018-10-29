@@ -2,12 +2,12 @@ const output = {
   Search: [
     {
       imdbID: 0,
-      Title: "Pirates of the Caribbean: Dead Man's Chest",
+      Title: "The First Movie",
       Poster: ""
     },
     {
       imdbID: 1,
-      Title: "Pirates of the Caribbean: At World's End",
+      Title: "The Second Movie",
       Poster: ""
     }
   ]

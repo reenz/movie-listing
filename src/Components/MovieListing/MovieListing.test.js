@@ -8,13 +8,27 @@ configure({ adapter: new Adapter() });
 global.fetch = fetch;
 
 describe('MovieListing component', () => {
-  describe('when rendered', () => {
-    it('should make a Api call', async () => {
-      const fetchSpy = jest.spyOn(window, 'fetch');
-      const movieListing = await shallow(
+   let fetchSpy;
+   let movieListing;
+
+  beforeEach( async () => {
+    fetchSpy = jest.spyOn(window, 'fetch');
+    movieListing = await shallow(
         <MovieListing />
       );
+  })
+
+  describe('when rendered', () => {
+    it('should make a Api call', () => {
       expect(fetchSpy).toBeCalled();
+    });
+
+    it('should return the length of fetched movies', () => {
+      expect(movieListing.state('movies').length).toEqual(2);
+    });
+
+    it('should return the title of fetched movies', () => {
+      expect(movieListing.state('movies')[0].Title).toEqual("The First Movie");
     });
   });
 });
