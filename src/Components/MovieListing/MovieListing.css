@@ -1,0 +1,54 @@
+.Container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    padding: 2%;
+}
+
+.List {
+    display: block;
+    height: 448px;
+    flex: 50%;
+    left: 0;
+    overflow-x: hidden;
+}
+
+.List::-webkit-scrollbar {
+    display: none;
+   }
+
+.Movie {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.MovieTitle{
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+}
+
+.LeftHandPoster {
+    height: 50%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.9);
+ }
+
+ .Poster {
+    flex: 50%;
+ }
+
+ .RightHandPoster {
+    color: linear-gradient( #D1DBF1,#A9CEE5 , #D69ABC);
+    box-shadow: 0 0 20px rgba(0,0,0,0.9);
+ }
+
+ .SearchInput {
+    position: sticky;
+    bottom: 0;
+ }
+ 

@@ -1,8 +1,5 @@
 .App {
   text-align: center;
-}
-
-.App-header {
-  background-color: #282c34;
-  color: white;
+  background: linear-gradient( #D1DBF1,#A9CEE5 , #D69ABC);
+  
 }
