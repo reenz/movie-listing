@@ -15,14 +15,23 @@ class MovieListing extends Component {
     await this.getMovies("");
   }
 
+  handleSearch = async (event) => {
+    let title = event.target.value;
+    await this.getMovies(title);
+  }
+
   render() {
     const{ movies} = this.state;
-
+  
     return(
-      <div> {movies.map((movie, index) =>
-        <span key={movie.imdbID} id={index}>
-        <img src={movie.Poster} alt={movie.Title} />
-        </span> )} 
+      <div>
+        <input className="SearchInput" type="text" onChange={this.handleSearch} />
+        <div> {movies.map((movie, index) =>
+          <span key={movie.imdbID} id={index}>
+          <p>{movie.Title}</p>
+          <img src={movie.Poster} alt={movie.Title} />
+          </span> )} 
+        </div>
       </div>
     )
   }

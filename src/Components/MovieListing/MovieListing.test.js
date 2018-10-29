@@ -15,7 +15,11 @@ describe('MovieListing component', () => {
     fetchSpy = jest.spyOn(window, 'fetch');
     movieListing = await shallow(
         <MovieListing />
-      );
+      ); 
+  })
+
+  afterEach(() => {
+    fetchSpy.mockClear();
   })
 
   describe('when rendered', () => {
@@ -23,7 +27,7 @@ describe('MovieListing component', () => {
       expect(fetchSpy).toBeCalled();
     });
 
-    it('should return the length of fetched movies', () => {
+    it('should return the length of fetched movies',() =>  {
       expect(movieListing.state('movies').length).toEqual(2);
     });
 
@@ -34,5 +38,5 @@ describe('MovieListing component', () => {
     it('should return the poster of fetched movies', () => {
       expect(movieListing.state('movies')[1].Poster).toEqual("./pathfor/secondMovie");
     });
-  });
+  })
 });
