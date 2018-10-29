@@ -9,3 +9,4 @@ This project fetches movie details from The Open Movie database API.
 
 ### Technologies
 * React
+* Jest, Enzyme 
