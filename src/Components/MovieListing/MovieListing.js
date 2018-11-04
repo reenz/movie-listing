@@ -45,7 +45,7 @@ class MovieListing extends Component {
           </div>
           </div>
           <div className="Poster">
-        <img className="RightHandPoster"src={posterUrl} alt=""/>
+           <img className="RightHandPoster"src={posterUrl} alt=""/>
         </div> 
       </div>
     )
